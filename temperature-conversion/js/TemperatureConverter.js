@@ -1,12 +1,3 @@
+export const celsiusToFahrenheit = (temp) => Number(((9 / 5) * temp) + 32);   
 
-
-const celsiusToFahrenheit = (temp) => ((9 / 5) * temp) + 32;
-
-const fahrenheitToCelsius = (temp) => (temp - 32) * (5 / 9);
-
-console.log(celsiusToFahrenheit(32));
-
-export default {
-    celsiusToFahrenheit,
-    fahrenheitToCelsius
-};
+export const fahrenheitToCelsius = (temp) => Number((temp - 32) * (5 / 9));
