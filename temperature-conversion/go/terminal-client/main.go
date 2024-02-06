@@ -1,6 +1,10 @@
-package main
+package main 
 
-import "fmt"
+import (
+	"fmt"
+
+	"tempconverter"
+	)
 
 func main(){
 	var option string 
@@ -38,23 +42,15 @@ func main(){
 		} 
 
 		if (option == "1" ){
-			result := celsiusToFahrenheit(temperature);
+			result := tempconverter.CelsiusToFahrenheit(temperature);
 			fmt.Println("RESULT:", temperature, "degrees celsius is equals to", result, "degrees fahrenheit")
 		} else if (option == "2") {
-			result :=  fahrenheitToCelsius(temperature)
+			result :=  tempconverter.FahrenheitToCelsius(temperature)
 			fmt.Println("RESULT: ", temperature, "degrees fahrenheit is equals to", result, "degrees celsius")
 		}
 		
 		fmt.Print("Press enter to continue...")
 		fmt.Scanln()
 	}
-}
-
-func celsiusToFahrenheit(temp int) float32{
-	return ((9.0/5.0) * float32(temp)) + 32.0 
-}
-
-func fahrenheitToCelsius(temp int) float32{
-	return (5.0/9.0) * (float32(temp) - 32.0)
 }
 
